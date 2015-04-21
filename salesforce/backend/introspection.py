@@ -14,7 +14,8 @@ import re
 
 from django.conf import settings
 from django.core.exceptions import ImproperlyConfigured
-from django.db.backends import BaseDatabaseIntrospection
+#from django.db.backends import BaseDatabaseIntrospection
+from django.db.backends.base.introspection import BaseDatabaseIntrospection
 from django.utils.datastructures import SortedDict
 from django.utils.encoding import force_text
 

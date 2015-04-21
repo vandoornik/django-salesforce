@@ -8,6 +8,7 @@
 import re
 
 from django.db.backends import BaseDatabaseOperations
+from django.db.backends.base.operations import BaseDatabaseOperations
 
 """
 Default database operations, with unquoted names.

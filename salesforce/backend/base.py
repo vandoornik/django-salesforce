@@ -14,7 +14,7 @@ import requests
 import threading
 
 from django.core.exceptions import ImproperlyConfigured
-from django.db.backends import BaseDatabaseFeatures, BaseDatabaseWrapper
+#from django.db.backends import BaseDatabaseFeatures, BaseDatabaseWrapper
 from django.db.backends.signals import connection_created
 from django.conf import settings
 
@@ -28,6 +28,10 @@ from salesforce.backend.driver import IntegrityError, DatabaseError
 from salesforce.backend import driver as Database
 from salesforce.backend import sf_alias, MAX_RETRIES
 from salesforce import DJANGO_16_PLUS
+
+from django.db.backends.base.base import BaseDatabaseWrapper
+from django.db.backends.base.features import BaseDatabaseFeatures
+
 try:
 	from urllib.parse import urlparse
 except ImportError:
